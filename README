@@ -1,0 +1,280 @@
+# 🏛️ Teoría Orgánica de la Política - Simulador Interactivo
+
+![Versión](https://img.shields.io/badge/versión-2.0-blue.svg)
+![Licencia](https://img.shields.io/badge/licencia-MIT-green.svg)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
+## 📖 Descripción
+
+**Teoría Orgánica de la Política** es un artefacto interactivo educativo que permite comprender los sistemas políticos desde una perspectiva orgánica y compleja. A través de analogías biológicas, el simulador permite analizar cómo diferentes indicadores influyen en la "salud" de un sistema político.
+
+### 🎯 Características principales
+
+- **Simulador Básico**: 3 indicadores fundamentales (Autoorganización, Resiliencia, Diversidad)
+- **Simulador Avanzado**: 22 indicadores adicionales organizados en 5 categorías
+- **Analogías Biológicas**: Comprende la política como un organismo vivo
+- **Tooltips Informativos**: Explicaciones detalladas de cada indicador
+- **Casos de Estudio**: Comparación entre países (Suecia, Dinamarca, Chile, Colombia, España)
+- **Diseño Responsive**: Funciona perfectamente en móviles, tablets y escritorio
+
+---
+
+## 🚀 Demo en Vivo
+
+👉 **[Ver Demo](https://tu-usuario.github.io/teoria-organica-politica/)**
+
+---
+
+## 📸 Capturas de Pantalla
+
+### Simulador Básico
+![Simulador Básico](screenshots/simulador-basico.png)
+
+### Simulador Avanzado con Pestañas
+![Simulador Avanzado](screenshots/simulador-avanzado.png)
+
+### Tooltips Informativos
+![Tooltips](screenshots/tooltips.png)
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **HTML5**: Estructura semántica
+- **CSS3**: Diseño moderno con variables CSS, gradientes y animaciones
+- **JavaScript (Vanilla)**: Interactividad sin frameworks
+- **Diseño Responsive**: Mobile-first approach
+
+---
+
+## 📂 Estructura del Proyecto
+
+```
+teoria-organica-politica/
+│
+├── index.html           # Estructura HTML principal
+├── script.js            # Lógica de interactividad
+├── style.css            # Estilos y diseño
+├── README.md            # Documentación del proyecto
+│
+├── assets/              # Recursos multimedia
+│   ├── logo.png         # Logo del proyecto
+│   └── favicon.ico      # Favicon
+│
+├── screenshots/         # Capturas de pantalla para README
+│   ├── simulador-basico.png
+│   ├── simulador-avanzado.png
+│   └── tooltips.png
+│
+└── docs/                # Documentación adicional
+    └── teoria-completa.pdf
+```
+
+---
+
+## 🎓 Categorías de Indicadores
+
+El simulador avanzado organiza 22 indicadores en 5 categorías temáticas:
+
+### 🏛️ Gobernanza y Transparencia (5 indicadores)
+- Estabilidad Política y Ausencia de Violencia/Terrorismo
+- Índice de Percepción de Corrupción
+- Efectividad Gubernamental
+- Libertad de Prensa
+- Nivel de Confianza en las Instituciones
+
+### 💰 Economía y Distribución (5 indicadores)
+- Crecimiento del PIB
+- Inflación
+- Coeficiente de Gini
+- Tasa de Pobreza
+- Gasto Público en Infraestructura
+
+### 🏥 Bienestar Social (4 indicadores)
+- Gasto Público en Salud
+- Gasto Público en Educación
+- Años Promedio de Escolaridad
+- Nivel de Cohesión Social
+
+### 🌱 Sostenibilidad y Resiliencia (4 indicadores)
+- Gasto en Protección Ambiental
+- Calidad del Aire y Agua
+- FM Global Resilience Index
+- Estabilidad Constitucional
+
+### 👥 Participación y Democracia (4 indicadores)
+- Nivel de Participación Ciudadana
+- Autonomía Local
+- Confianza Interpersonal
+- Innovación Política
+
+---
+
+## 💻 Instalación y Uso
+
+### Opción 1: Clonar el repositorio
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/teoria-organica-politica.git
+
+# Navegar al directorio
+cd teoria-organica-politica
+
+# Abrir index.html en tu navegador
+# O usar un servidor local:
+python -m http.server 8000
+# Luego visita: http://localhost:8000
+```
+
+### Opción 2: Descargar ZIP
+
+1. Descarga el proyecto como ZIP
+2. Extrae los archivos
+3. Abre `index.html` en tu navegador
+
+### Opción 3: GitHub Pages
+
+El proyecto está desplegado automáticamente en:
+**https://tu-usuario.github.io/teoria-organica-politica/**
+
+---
+
+## 🎮 Cómo Usar el Simulador
+
+### Modo Básico
+1. Ajusta los 3 indicadores básicos usando los controles deslizantes
+2. Observa cómo cambian los valores de Vitalidad, Estabilidad y Adaptabilidad
+3. Haz clic en "Ver Simulador Avanzado" para acceder a más indicadores
+
+### Modo Avanzado
+1. Navega entre las 5 pestañas de categorías
+2. Ajusta cualquiera de los 22 indicadores adicionales
+3. Haz clic en el ícono ℹ️ para ver información detallada de cada indicador
+4. Observa el "Estado General" del sistema político
+5. Usa "Volver al Modo Básico" para regresar
+
+### Otras Funcionalidades
+- **Juego de Analogías**: Aprende las correspondencias entre sistemas biológicos y políticos
+- **Quiz Interactivo**: Pon a prueba tus conocimientos
+- **Comparación de Países**: Compara indicadores entre naciones
+- **Casos de Estudio**: Analiza escenarios de crisis política
+
+---
+
+## 📊 Metodología de Cálculo
+
+### Indicadores Resultantes
+
+Los tres indicadores finales se calculan mediante fórmulas ponderadas:
+
+**Vitalidad** = Economía (25%) + Bienestar (40%) + Innovación (15%) + Distribución (20%)
+
+**Estabilidad** = Gobernanza (50%) + Sostenibilidad (30%) + Control Inflación (20%)
+
+**Adaptabilidad** = Resiliencia (35%) + Participación (30%) + Innovación (15%) + Flexibilidad (20%)
+
+### Estados de Salud Política
+
+- 🟢 **Excelente** (80-100): Sistema muy saludable
+- 🟡 **Bueno** (65-79): Sistema saludable con áreas de mejora
+- 🟠 **Regular** (50-64): Sistema con desafíos significativos
+- 🔴 **Crítico** (0-49): Sistema con problemas graves
+
+---
+
+## 🔬 Fundamento Teórico
+
+Este proyecto se basa en la **Teoría Orgánica de la Política**, que propone entender los sistemas políticos como entidades complejas y dinámicas análogas a organismos vivos.
+
+### Conceptos Clave
+
+- **Autoorganización**: Capacidad de estructurarse de manera autónoma
+- **Resiliencia Adaptativa**: Capacidad de resistir y recuperarse de crisis
+- **Emergencia**: Comportamientos colectivos surgidos de interacciones locales
+- **Homeostasis**: Equilibrio dinámico del sistema político
+- **Sistemas Complejos**: Interconexión profunda entre componentes
+
+### Fuentes de Datos
+
+Los indicadores se basan en métricas reconocidas internacionalmente:
+- Worldwide Governance Indicators (WGI) - Banco Mundial
+- Transparencia Internacional
+- Índice de Desarrollo Humano (IDH) - ONU
+- FM Global Resilience Index
+- OCDE, OMS, UNESCO
+
+---
+
+## 🤝 Contribuir
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto:
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/NuevaCaracteristica`)
+3. Commit tus cambios (`git commit -m 'Añadir nueva característica'`)
+4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
+
+### Ideas de Mejoras
+
+- [ ] Agregar gráficos visuales (Chart.js)
+- [ ] Implementar más países en la comparación
+- [ ] Añadir exportación de resultados (PDF/CSV)
+- [ ] Crear modo oscuro
+- [ ] Traducción a otros idiomas
+- [ ] Integración con APIs de datos reales
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 👨‍💻 Autor
+
+**Tu Nombre**
+- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+- Email: tu-email@ejemplo.com
+
+---
+
+## 🙏 Agradecimientos
+
+- Inspirado en la teoría de sistemas complejos de Edgar Morin y Niklas Luhmann
+- Datos de organizaciones internacionales (Banco Mundial, ONU, OCDE)
+- Comunidad de desarrolladores open source
+
+---
+
+## 📚 Referencias
+
+- [Documento Completo de la Teoría](docs/teoria-completa.pdf)
+- [Worldwide Governance Indicators](https://www.worldbank.org/en/publication/worldwide-governance-indicators)
+- [Índice de Desarrollo Humano](https://hdr.undp.org/)
+- [Transparencia Internacional](https://www.transparency.org/)
+
+---
+
+## 📈 Estadísticas del Proyecto
+
+![GitHub stars](https://img.shields.io/github/stars/tu-usuario/teoria-organica-politica?style=social)
+![GitHub forks](https://img.shields.io/github/forks/tu-usuario/teoria-organica-politica?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/tu-usuario/teoria-organica-politica?style=social)
+
+---
+
+## 🌐 Idiomas Disponibles
+
+- [x] Español
+- [ ] Inglés (próximamente)
+- [ ] Portugués (próximamente)
+
+---
+
+**¿Te gustó este proyecto? ¡Dale una ⭐ en GitHub!**
