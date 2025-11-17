@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría Orgánica de la Política - Artefacto Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Teoría Orgánica de la Política</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#analogias">Analogías</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#aplicaciones">Aplicaciones</a></li>
+                <li><a href="#casos">Casos de Estudio</a></li>
+                <li><a href="#conclusiones">Conclusiones</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Introducción</h2>
+            <p>Bienvenido al artefacto interactivo sobre la Teoría Orgánica de la Política. Explora cada sección y participa en actividades para comprender los sistemas políticos desde una perspectiva orgánica y compleja.</p>
+            <hr>
+            <h3>Pregunta de Reflexión</h3>
+            <form id="reflexion-form">
+                <label for="respuesta-reflexion">¿Por qué es importante cambiar la metáfora mecánica por la orgánica en política?</label><br>
+                <textarea id="respuesta-reflexion" rows="3" cols="60" placeholder="Escribe tu respuesta aquí..."></textarea><br>
+                <button type="button" id="verificar-reflexion">Enviar respuesta</button>
+                <button type="button" id="limpiar-reflexion">Limpiar</button>
+                <div id="feedback-reflexion"></div>
+            </form>
+        </section>
+
+        <section id="analogias">
+            <h2>Analogías Biológicas</h2>
+            <div id="actividad-analogias">
+                <h3>Juego de Analogías</h3>
+                <p>Empareja cada sistema biológico con su equivalente político. Selecciona la respuesta y verifica si es correcta.</p>
+                <form id="juego-analogias-form">
+                    <div class="analogias-item">
+                        <label for="select-nervioso">Sistema Nervioso:</label>
+                        <select id="select-nervioso">
+                            <option value="">Selecciona...</option>
+                            <option value="Gobierno y Comunicación">Gobierno y Comunicación</option>
+                            <option value="Defensa Nacional">Defensa Nacional</option>
+                            <option value="Producción y Abastecimiento">Producción y Abastecimiento</option>
+                        </select>
+                        <span id="feedback-nervioso"></span>
+                    </div>
+                    <div class="analogias-item">
+                        <label for="select-inmunologico">Sistema Inmunológico:</label>
+                        <select id="select-inmunologico">
+                            <option value="">Selecciona...</option>
+                            <option value="Gobierno y Comunicación">Gobierno y Comunicación</option>
+                            <option value="Defensa Nacional">Defensa Nacional</option>
+                            <option value="Producción y Abastecimiento">Producción y Abastecimiento</option>
+                        </select>
+                        <span id="feedback-inmunologico"></span>
+                    </div>
+                    <div class="analogias-item">
+                        <label for="select-digestivo">Sistema Digestivo:</label>
+                        <select id="select-digestivo">
+                            <option value="">Selecciona...</option>
+                            <option value="Gobierno y Comunicación">Gobierno y Comunicación</option>
+                            <option value="Defensa Nacional">Defensa Nacional</option>
+                            <option value="Producción y Abastecimiento">Producción y Abastecimiento</option>
+                        </select>
+                        <span id="feedback-digestivo"></span>
+                    </div>
+                    <button type="button" id="verificar-analogias">Verificar respuestas</button>
+                    <button type="button" id="limpiar-analogias">Limpiar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="componentes">
+            <h2>Componentes Clave</h2>
+            
+            <!-- SIMULADOR BÁSICO -->
+            <div id="actividad-componentes">
+                <h3>Simulador de Sistema Político - Modo Básico</h3>
+                <p>Ajusta los valores y observa cómo cambian los indicadores de "salud" política.</p>
+                <form id="simulador-form">
+                    <label for="autoorganizacion">Autoorganización:</label>
+                    <input type="range" id="autoorganizacion" name="autoorganizacion" min="0" max="100" value="50">
+                    <span id="val-autoorganizacion">50</span><br>
+                    
+                    <label for="resiliencia">Resiliencia:</label>
+                    <input type="range" id="resiliencia" name="resiliencia" min="0" max="100" value="50">
+                    <span id="val-resiliencia">50</span><br>
+                    
+                    <label for="diversidad">Diversidad:</label>
+                    <input type="range" id="diversidad" name="diversidad" min="0" max="100" value="50">
+                    <span id="val-diversidad">50</span><br>
+                </form>
+                
+                <div id="indicadores-salud">
+                    <h4>Indicadores de Salud Política</h4>
+                    <ul>
+                        <li>Vitalidad: <span id="indicador-vitalidad">0</span></li>
+                        <li>Estabilidad: <span id="indicador-estabilidad">0</span></li>
+                        <li>Adaptabilidad: <span id="indicador-adaptabilidad">0</span></li>
+                    </ul>
+                </div>
+                
+                <!-- BOTÓN PARA VER SIMULADOR AVANZADO -->
+                <div class="modo-avanzado-container">
+                    <button type="button" id="toggle-simulador-avanzado" class="btn-avanzado">
+                        📊 Ver Simulador Avanzado (22 indicadores adicionales)
+                    </button>
+                </div>
+            </div>
+
+            <!-- SIMULADOR AVANZADO (Oculto por defecto) -->
+            <div id="simulador-avanzado" class="simulador-avanzado oculto">
+                <h3>Simulador Avanzado - 25 Indicadores</h3>
+                <p class="descripcion-avanzada">Explora cómo 22 indicadores adicionales influyen en la vitalidad, estabilidad y adaptabilidad del sistema político. Los indicadores están organizados por categorías temáticas.</p>
+                
+                <!-- PESTAÑAS DE CATEGORÍAS -->
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="gobernanza">🏛️ Gobernanza y Transparencia</button>
+                        <button class="tab-button" data-tab="economia">💰 Economía y Distribución</button>
+                        <button class="tab-button" data-tab="bienestar">🏥 Bienestar Social</button>
+                        <button class="tab-button" data-tab="sostenibilidad">🌱 Sostenibilidad y Resiliencia</button>
+                        <button class="tab-button" data-tab="participacion">👥 Participación y Democracia</button>
+                    </div>
+                </div>
+
+                <!-- CONTENIDO DE PESTAÑAS -->
+                <div class="tab-content-container">
+                    
+                    <!-- TAB 1: GOBERNANZA Y TRANSPARENCIA -->
+                    <div id="tab-gobernanza" class="tab-content active">
+                        <h4>🏛️ Gobernanza y Transparencia</h4>
+                        
+                        <div class="indicador-item">
+                            <label for="estabilidad_politica">Estabilidad Política y Ausencia de Violencia/Terrorismo
+                                <span class="info-icon" data-indicador="estabilidad_politica">ℹ️</span>
+                            </label>
+                            <input type="range" id="estabilidad_politica" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-estabilidad_politica">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="corrupcion">Índice de Percepción de Corrupción
+                                <span class="info-icon" data-indicador="corrupcion">ℹ️</span>
+                            </label>
+                            <input type="range" id="corrupcion" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-corrupcion">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="efectividad_gubernamental">Efectividad Gubernamental
+                                <span class="info-icon" data-indicador="efectividad_gubernamental">ℹ️</span>
+                            </label>
+                            <input type="range" id="efectividad_gubernamental" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-efectividad_gubernamental">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="libertad_prensa">Libertad de Prensa
+                                <span class="info-icon" data-indicador="libertad_prensa">ℹ️</span>
+                            </label>
+                            <input type="range" id="libertad_prensa" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-libertad_prensa">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="confianza_instituciones">Nivel de Confianza en las Instituciones
+                                <span class="info-icon" data-indicador="confianza_instituciones">ℹ️</span>
+                            </label>
+                            <input type="range" id="confianza_instituciones" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-confianza_instituciones">50</span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: ECONOMÍA Y DISTRIBUCIÓN -->
+                    <div id="tab-economia" class="tab-content">
+                        <h4>💰 Economía y Distribución</h4>
+                        
+                        <div class="indicador-item">
+                            <label for="crecimiento_pib">Crecimiento del PIB
+                                <span class="info-icon" data-indicador="crecimiento_pib">ℹ️</span>
+                            </label>
+                            <input type="range" id="crecimiento_pib" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-crecimiento_pib">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="inflacion">Inflación (inversa)
+                                <span class="info-icon" data-indicador="inflacion">ℹ️</span>
+                            </label>
+                            <input type="range" id="inflacion" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-inflacion">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="gini">Coeficiente de Gini (inverso)
+                                <span class="info-icon" data-indicador="gini">ℹ️</span>
+                            </label>
+                            <input type="range" id="gini" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-gini">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="pobreza">Tasa de Pobreza (inversa)
+                                <span class="info-icon" data-indicador="pobreza">ℹ️</span>
+                            </label>
+                            <input type="range" id="pobreza" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-pobreza">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="infraestructura">Gasto Público en Infraestructura
+                                <span class="info-icon" data-indicador="infraestructura">ℹ️</span>
+                            </label>
+                            <input type="range" id="infraestructura" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-infraestructura">50</span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: BIENESTAR SOCIAL -->
+                    <div id="tab-bienestar" class="tab-content">
+                        <h4>🏥 Bienestar Social</h4>
+                        
+                        <div class="indicador-item">
+                            <label for="salud">Gasto Público en Salud
+                                <span class="info-icon" data-indicador="salud">ℹ️</span>
+                            </label>
+                            <input type="range" id="salud" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-salud">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="educacion">Gasto Público en Educación
+                                <span class="info-icon" data-indicador="educacion">ℹ️</span>
+                            </label>
+                            <input type="range" id="educacion" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-educacion">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="escolaridad">Años Promedio de Escolaridad
+                                <span class="info-icon" data-indicador="escolaridad">ℹ️</span>
+                            </label>
+                            <input type="range" id="escolaridad" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-escolaridad">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="cohesion_social">Nivel de Cohesión Social
+                                <span class="info-icon" data-indicador="cohesion_social">ℹ️</span>
+                            </label>
+                            <input type="range" id="cohesion_social" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-cohesion_social">50</span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 4: SOSTENIBILIDAD Y RESILIENCIA -->
+                    <div id="tab-sostenibilidad" class="tab-content">
+                        <h4>🌱 Sostenibilidad y Resiliencia</h4>
+                        
+                        <div class="indicador-item">
+                            <label for="ambiente">Gasto en Protección Ambiental
+                                <span class="info-icon" data-indicador="ambiente">ℹ️</span>
+                            </label>
+                            <input type="range" id="ambiente" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-ambiente">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="calidad_aire_agua">Calidad del Aire y Agua
+                                <span class="info-icon" data-indicador="calidad_aire_agua">ℹ️</span>
+                            </label>
+                            <input type="range" id="calidad_aire_agua" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-calidad_aire_agua">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="resiliencia_fm">FM Global Resilience Index
+                                <span class="info-icon" data-indicador="resiliencia">ℹ️</span>
+                            </label>
+                            <input type="range" id="resiliencia_fm" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-resiliencia_fm">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="estabilidad_constitucional">Estabilidad Constitucional
+                                <span class="info-icon" data-indicador="estabilidad_constitucional">ℹ️</span>
+                            </label>
+                            <input type="range" id="estabilidad_constitucional" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-estabilidad_constitucional">50</span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 5: PARTICIPACIÓN Y DEMOCRACIA -->
+                    <div id="tab-participacion" class="tab-content">
+                        <h4>👥 Participación y Democracia</h4>
+                        
+                        <div class="indicador-item">
+                            <label for="participacion_ciudadana">Nivel de Participación Ciudadana
+                                <span class="info-icon" data-indicador="participacion_ciudadana">ℹ️</span>
+                            </label>
+                            <input type="range" id="participacion_ciudadana" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-participacion_ciudadana">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="autonomia_local">Autonomía Local
+                                <span class="info-icon" data-indicador="autonomia_local">ℹ️</span>
+                            </label>
+                            <input type="range" id="autonomia_local" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-autonomia_local">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="confianza_interpersonal">Confianza Interpersonal
+                                <span class="info-icon" data-indicador="confianza_interpersonal">ℹ️</span>
+                            </label>
+                            <input type="range" id="confianza_interpersonal" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-confianza_interpersonal">50</span>
+                        </div>
+
+                        <div class="indicador-item">
+                            <label for="innovacion_politica">Innovación Política
+                                <span class="info-icon" data-indicador="innovacion_politica">ℹ️</span>
+                            </label>
+                            <input type="range" id="innovacion_politica" min="0" max="100" value="50">
+                            <span class="valor-indicador" id="val-innovacion_politica">50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INDICADORES RESULTANTES AVANZADOS -->
+                <div id="indicadores-salud-avanzado" class="indicadores-avanzados">
+                    <h4>📊 Indicadores de Salud Política (Avanzado)</h4>
+                    <div class="resultados-grid">
+                        <div class="resultado-item">
+                            <span class="resultado-label">Vitalidad:</span>
+                            <span class="resultado-valor" id="indicador-vitalidad-avanzado">0</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-label">Estabilidad:</span>
+                            <span class="resultado-valor" id="indicador-estabilidad-avanzado">0</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-label">Adaptabilidad:</span>
+                            <span class="resultado-valor" id="indicador-adaptabilidad-avanzado">0</span>
+                        </div>
+                    </div>
+                    <div class="estado-salud">
+                        <p><strong>Estado General:</strong> <span id="estado-general">Evaluando...</span></p>
+                    </div>
+                </div>
+
+                <!-- BOTÓN PARA VOLVER AL MODO BÁSICO -->
+                <div class="modo-basico-container">
+                    <button type="button" id="volver-basico" class="btn-volver">
+                        ← Volver al Modo Básico
+                    </button>
+                </div>
+            </div>
+
+            <hr>
+            
+            <!-- QUIZ INTERACTIVO -->
+            <h3>Quiz Interactivo: Conceptos Clave</h3>
+            <form id="quiz-conceptos-form">
+                <div class="quiz-item">
+                    <label for="quiz-emergencia">¿Qué significa "emergencia" en sistemas complejos?</label><br>
+                    <select id="quiz-emergencia">
+                        <option value="">Selecciona...</option>
+                        <option value="A">Que surgen comportamientos colectivos a partir de interacciones locales.</option>
+                        <option value="B">Que el sistema entra en crisis.</option>
+                        <option value="C">Que hay una autoridad central fuerte.</option>
+                    </select>
+                    <span id="feedback-emergencia"></span>
+                </div>
+                <div class="quiz-item">
+                    <label for="quiz-retroalimentacion">¿Qué es la retroalimentación?</label><br>
+                    <select id="quiz-retroalimentacion">
+                        <option value="">Selecciona...</option>
+                        <option value="A">Un mecanismo de ajuste de procesos mediante información de resultados.</option>
+                        <option value="B">Un tipo de liderazgo político.</option>
+                        <option value="C">Un sistema de defensa nacional.</option>
+                    </select>
+                    <span id="feedback-retroalimentacion"></span>
+                </div>
+                <div class="quiz-item">
+                    <label for="quiz-resiliencia">¿Por qué es importante la resiliencia en sistemas políticos?</label><br>
+                    <select id="quiz-resiliencia">
+                        <option value="">Selecciona...</option>
+                        <option value="A">Permite adaptarse y responder a cambios y crisis.</option>
+                        <option value="B">Aumenta la burocracia.</option>
+                        <option value="C">Reduce la diversidad.</option>
+                    </select>
+                    <span id="feedback-resiliencia"></span>
+                </div>
+                <button type="button" id="verificar-quiz-conceptos">Verificar respuestas</button>
+                <button type="button" id="limpiar-quiz-conceptos">Limpiar</button>
+            </form>
+        </section>
+
+        <section id="aplicaciones">
+            <h2>Aplicaciones</h2>
+            <div id="actividad-aplicaciones">
+                <h3>Estudio de Caso Interactivo</h3>
+                <p>Imagina que eres líder político en una crisis nacional. Elige una acción y observa el impacto en la estabilidad y salud del sistema.</p>
+                <form id="caso-form">
+                    <label for="caso-decision">La economía está en recesión y hay protestas sociales. ¿Qué acción tomas?</label><br>
+                    <select id="caso-decision">
+                        <option value="">Selecciona...</option>
+                        <option value="dialogo">Iniciar diálogo abierto con los líderes sociales y proponer reformas.</option>
+                        <option value="represion">Reprimir las protestas con fuerza policial.</option>
+                        <option value="inversion">Aumentar la inversión pública en servicios y empleo.</option>
+                    </select>
+                    <button type="button" id="verificar-caso">Ver impacto</button>
+                    <button type="button" id="limpiar-caso">Limpiar</button>
+                    <div id="feedback-caso"></div>
+                </form>
+            </div>
+        </section>
+
+        <section id="casos">
+            <h2>Casos de Estudio</h2>
+            <div id="actividad-casos">
+                <h3>Comparación de Indicadores de Salud Política</h3>
+                <p>Selecciona dos países y compara sus indicadores de salud política.</p>
+                <form id="comparacion-paises-form">
+                    <label for="pais1">País 1:</label>
+                    <select id="pais1">
+                        <option value="">Selecciona...</option>
+                        <option value="Suecia">Suecia</option>
+                        <option value="Dinamarca">Dinamarca</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="España">España</option>
+                    </select>
+                    <label for="pais2">País 2:</label>
+                    <select id="pais2">
+                        <option value="">Selecciona...</option>
+                        <option value="Suecia">Suecia</option>
+                        <option value="Dinamarca">Dinamarca</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="España">España</option>
+                    </select>
+                    <button type="button" id="comparar-paises">Comparar</button>
+                    <button type="button" id="limpiar-comparacion">Limpiar</button>
+                </form>
+                <div id="resultado-comparacion"></div>
+            </div>
+        </section>
+
+        <section id="conclusiones">
+            <h2>Conclusiones y Recomendaciones</h2>
+            <div class="conclusiones-actividades">
+                <h3>Autoevaluación final</h3>
+                <form id="form-autoevaluacion">
+                    <label for="autoevaluacion-respuesta">¿Qué concepto o analogía te resultó más útil para comprender la salud política?</label><br>
+                    <textarea id="autoevaluacion-respuesta" rows="3" cols="60" placeholder="Escribe tu reflexión aquí..."></textarea><br>
+                    <button type="button" id="verificar-autoevaluacion">Enviar</button>
+                    <button type="button" id="limpiar-autoevaluacion">Limpiar</button>
+                </form>
+                <div id="feedback-autoevaluacion"></div>
+                <hr>
+                <h3>Foro de ideas</h3>
+                <form id="form-foro">
+                    <label for="foro-idea">¿Qué recomendación o mejora propondrías para fortalecer la salud política de tu país?</label><br>
+                    <textarea id="foro-idea" rows="3" cols="60" placeholder="Comparte tu idea o propuesta..."></textarea><br>
+                    <button type="button" id="enviar-foro">Publicar</button>
+                    <button type="button" id="limpiar-foro">Limpiar</button>
+                </form>
+                <div id="foro-lista"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL PARA TOOLTIPS -->
+    <div id="modal-info" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descripcion"></p>
+            <p class="modal-sistema"><strong>Sistema Biológico Análogo:</strong> <span id="modal-sistema"></span></p>
+            <p class="modal-fuente"><strong>Fuente:</strong> <span id="modal-fuente"></span></p>
+            <p class="modal-rango"><strong>Rango:</strong> <span id="modal-rango"></span></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Artefacto Interactivo - Teoría Orgánica de la Política</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
